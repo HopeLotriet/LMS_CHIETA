@@ -29,8 +29,8 @@ if RENDER_EXTERNAL_HOSTNAME:
 # # Application definition
 
 INSTALLED_APPS = [
-    'rest_framework',               #required for django rest framework
-    'widget_tweaks',                #required dependency
+    'rest_framework',  # required for django rest framework
+    'widget_tweaks',  # required dependency
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'django.contrib.staticfiles',
     # 'core',   #Appname so we don't delete---only modify.
-    'core.apps.CoreConfig', # To load predefined qualifications
+    'core.apps.CoreConfig',  # To load predefined qualifications
     'django_extensions',
 
 ]
@@ -78,12 +78,12 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-   'default': {
+    'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'chieta_test',           # match what's in pgAdmin
-        'USER': 'postgres',
-        'PASSWORD': 'Musa',  # update accordingly
-        'HOST': 'localhost',
+        'NAME': 'chieta_lmsdb',
+        'USER': 'chieta_lmsdb_user',
+        'PASSWORD': 'KLo46ahIw4gYzF3InULyEyd64qA3tWDC',
+        'HOST': 'dpg-d4e4ut6mcj7s73cfdb6g-a.singapore-postgres.render.com',
         'PORT': '5432',
     }
 }
@@ -118,11 +118,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# #Very important!!!!!!!!!!!!!!!!!!!!!!!!!!!! [core] is the app name before CustomUser here but we can change it later. 
+# #Very important!!!!!!!!!!!!!!!!!!!!!!!!!!!! [core] is the app name before CustomUser here but we can change it later.
 AUTH_USER_MODEL = 'core.CustomUser'
 
 AUTHENTICATION_BACKENDS = [
-    'core.authback.EmailBackend',  #note appname at start so when we change this must change too.
+    # note appname at start so when we change this must change too.
+    'core.authback.EmailBackend',
     'django.contrib.auth.backends.ModelBackend',
 ]
 

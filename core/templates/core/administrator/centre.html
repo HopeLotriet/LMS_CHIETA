@@ -529,6 +529,18 @@
                     </a>
                 </li>
 
+                   <li class="nav-item">
+            <a href="{% url 'administrator_dashboards' %}"
+               class="nav-link{% if request.resolver_match.url_name == 'administrator_dashboards' %} active{% endif %}">
+                <i class="fas fa-chart-line me-2"></i>Analytics
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'administrator_paperbank' %}"
+               class="nav-link{% if request.resolver_match.url_name == 'administrator_paperbank' %} active{% endif %}">
+                <i class="fas fa-folder-open me-2"></i>Paper Bank
+            </a>
+
                 <button class="gradient-button w-100 py-0">
                     <a href="{% url 'logout' %}" class="fix"> Log Out</a>
                 </button>

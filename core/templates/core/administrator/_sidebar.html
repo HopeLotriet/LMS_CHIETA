@@ -7,38 +7,38 @@
     <ul>
         <li class="nav-item">
             <a href="{% url 'admin_dashboard' %}"
-               class="nav-link{% if request.resolver_match.url_name == 'admin_dashboard' %} active{% endif %}">
+                class="nav-link{% if request.resolver_match.url_name == 'admin_dashboard' %} active{% endif %}">
                 <i class="fas fa-home me-2"></i>Dashboard
             </a>
         </li>
         <li class="nav-item">
-            <a href="{% url 'administrator_dashboards' %}"
-               class="nav-link{% if request.resolver_match.url_name == 'administrator_dashboards' %} active{% endif %}">
-                <i class="fas fa-chart-line me-2"></i>Analytics
-            </a>
-        </li>
-        <li class="nav-item">
-            <a href="{% url 'administrator_paperbank' %}"
-               class="nav-link{% if request.resolver_match.url_name == 'administrator_paperbank' %} active{% endif %}">
-                <i class="fas fa-folder-open me-2"></i>Paper Bank
-            </a>
-        </li>
-        <li class="nav-item">
             <a href="{% url 'assessment_centres' %}"
-               class="nav-link{% if request.resolver_match.url_name == 'assessment_centres' %} active{% endif %}">
+                class="nav-link{% if request.resolver_match.url_name == 'assessment_centres' %} active{% endif %}">
                 <i class="fas fa-upload me-2"></i>Assessment Centres
             </a>
         </li>
         <li class="nav-item">
             <a href="{% url 'user_management' %}"
-               class="nav-link{% if request.resolver_match.url_name == 'user_management' %} active{% endif %}">
+                class="nav-link{% if request.resolver_match.url_name == 'user_management' %} active{% endif %}">
                 <i class="fas fa-cogs me-2"></i>User Management
             </a>
         </li>
         <li class="nav-item">
             <a href="{% url 'manage_qualifications' %}"
-               class="nav-link{% if request.resolver_match.url_name == 'manage_qualifications' %} active{% endif %}">
+                class="nav-link{% if request.resolver_match.url_name == 'manage_qualifications' %} active{% endif %}">
                 <i class="fas fa-graduation-cap me-2"></i>Qualifications
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'administrator_dashboards' %}"
+                class="nav-link{% if request.resolver_match.url_name == 'administrator_dashboards' %} active{% endif %}">
+                <i class="fas fa-chart-line me-2"></i>Analytics
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'administrator_paperbank' %}"
+                class="nav-link{% if request.resolver_match.url_name == 'administrator_paperbank' %} active{% endif %}">
+                <i class="fas fa-folder-open me-2"></i>Paper Bank
             </a>
         </li>
         <button class="gradient-button w-100 py-0">

@@ -135,7 +135,7 @@
 #     'django.contrib.auth.backends.ModelBackend',
 # ]
 
-# # Email configuration 
+# # Email configuration
 # if DEBUG == True:
 #     # Development: Print emails to the console
 #     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -264,6 +264,7 @@ AWS_STORAGE_BUCKET_NAME = 'chieta-media'
 AWS_S3_REGION_NAME = 'us-west-2'
 AWS_S3_FILE_OVERWRITE = False
 AWS_DEFAULT_ACL = None
+AWS_QUERYSTRING_AUTH = False
 
 # Default file storage to S3
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
@@ -299,7 +300,7 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
 
-# Email configuration 
+# Email configuration
 # 🚨 TEMPORARY DEMO CHANGE - Real email sending for demo
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
